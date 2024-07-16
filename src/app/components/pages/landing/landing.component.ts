@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
-import { ToasterComponent } from '../../../shared/toaster/toaster.component';
+import { ProjectService } from '../../../services/project/project.service';
 import { LoaderComponent } from '../../../shared/loader/loader.component';
+import { ToasterComponent } from '../../../shared/toaster/toaster.component';
 
 @Component({
   selector: 'app-landing',
@@ -14,6 +15,23 @@ export class LandingComponent {
 
   isLoading: boolean = false;
 
+  projects: any[] = [];
+
+  constructor(private projectService: ProjectService) {}
+
+  ngOnInit(): void {
+    this.projectService.getAllProjects().subscribe(
+      (data) => {
+        this.projects = data;
+        this.toaster.showMessage('Projects fetched successfully!', 'success', 5000);
+      },
+      (error) => {
+        console.error('Error fetching projects', error);
+        this.toaster.showMessage('Error fetching projects!', 'error', 5000);
+      }
+    );
+  }
+
   showSuccess() {
     this.toaster.showMessage('Operation successful!', 'success', 3000);
   }
@@ -26,7 +44,7 @@ export class LandingComponent {
     this.isLoading = true;
   }
 
-  hideLoader() {
+  getAllProjects() {
     this.isLoading = false;
   }
 }
