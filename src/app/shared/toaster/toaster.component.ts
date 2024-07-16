@@ -14,7 +14,11 @@ export class ToasterComponent {
   isSuccess: boolean = true;
   isVisible: boolean = false;
 
-  showMessage(message: string, type: 'success' | 'error', timeout: number = Toaster_Configs.TIMEOUT) {
+  showMessage(
+    message: string,
+    type: 'success' | 'error',
+    timeout: number = Toaster_Configs.TIMEOUT
+  ) {
     this.message = message;
     this.isSuccess = type === 'success';
     this.isVisible = true;
