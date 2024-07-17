@@ -1,23 +1,33 @@
 <div class="container mt-5">
   <div class="row mb-3">
     <div class="col">
-      <img src="assets/images/pharmteco-logo-240x84.png" alt="Pharmteco Logo" class="logo">
+      <img
+        src="assets/images/pharmteco-logo-240x84.png"
+        alt="Pharmteco Logo"
+        class="logo"
+      />
     </div>
   </div>
   <div class="row">
     <div class="col">
-      <button class="btn btn-primary" (click)="showSuccess()">Show Success Message</button>
+      <button class="btn btn-primary" (click)="showSuccess()">
+        Show Success Message
+      </button>
     </div>
     <div class="col">
-      <button class="btn btn-danger" (click)="showFailure()">Show Failure Message</button>
+      <button class="btn btn-danger" (click)="showFailure()">
+        Show Failure Message
+      </button>
     </div>
     <div class="col">
       <button class="btn btn-info" (click)="toggleLoader()">Show Loader</button>
     </div>
     <div class="col">
-      <button class="btn btn-warning" (click)="getAllProjects()">Call API</button>
+      <button class="btn btn-warning" (click)="getAllProjects()">
+        Call API
+      </button>
     </div>
   </div>
-  <app-loader [isLoading]="isLoading"></app-loader>
+  <app-loader></app-loader>
 </div>
 <app-toaster></app-toaster>

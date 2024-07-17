@@ -1,0 +1,40 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.outer-container {
+  width: 98%;
+  height: 98%;
+  margin: 1%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box; /* Add this to include padding and border in the element's total width and height */
+}
+
+.inner-container {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* Add this to include padding and border in the element's total width and height */
+}
+
+.inner-container h2 {
+  margin-bottom: 20px;
+}
+
+.inner-container .btn {
+  width: 100%;
+  margin-bottom: 10px; /* Added margin for proper alignment */
+}

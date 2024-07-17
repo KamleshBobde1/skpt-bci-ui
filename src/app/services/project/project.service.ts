@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { HttpService } from '../rest/http.service';
 import { API_URL } from '../../utils/api-url';
+import { HttpService } from '../rest/http.service';
 
 @Injectable({
   providedIn: 'root',

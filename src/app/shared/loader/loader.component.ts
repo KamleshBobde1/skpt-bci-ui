@@ -1,12 +1,19 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { LoaderService } from '../../services/loader/loader.service';
+
 @Component({
   selector: 'app-loader',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './loader.component.html',
-  styleUrl: './loader.component.css',
+  styleUrls: ['./loader.component.css'],
 })
 export class LoaderComponent {
-  @Input() isLoading: boolean = false;
+  isLoading$: Observable<boolean>;
+
+  constructor(private loaderService: LoaderService) {
+    this.isLoading$ = this.loaderService.isLoading$;
+  }
 }

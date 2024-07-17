@@ -21,6 +21,7 @@
 
 .toast-body {
   padding: 0.75rem;
+  color: #fff; /* Ensure text color is white for better visibility */
 }
 
 .btn-close {
@@ -29,4 +30,12 @@
 
 .toast-header .me-2 {
   font-size: 1.5rem;
+}
+
+.bg-success {
+  background-color: #198754 !important; /* Bootstrap success color */
+}
+
+.bg-danger {
+  background-color: #dc3545 !important; /* Bootstrap danger color */
 }

@@ -1,0 +1,19 @@
+<div class="outer-container">
+  <div class="inner-container">
+    <h2 class="text-center">Home Page</h2>
+    <div class="d-flex flex-column align-items-center">
+      <button (click)="showSuccessToaster()" class="btn btn-success mb-3">
+        Show Success Toaster
+      </button>
+      <button (click)="showFailureToaster()" class="btn btn-danger mb-3">
+        Show Failure Toaster
+      </button>
+      <button (click)="showLoader()" class="btn btn-info mb-3">
+        Show Loader
+      </button>
+      <button (click)="callApi()" class="btn btn-primary mb-3">Call API</button>
+    </div>
+    <app-toaster></app-toaster>
+    <app-loader></app-loader>
+  </div>
+</div>
